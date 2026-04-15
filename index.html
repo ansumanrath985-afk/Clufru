@@ -1,186 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CLUFRU | Web & App Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLUFRU | Web & App Development</title>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    background: #0f172a;
-    color: white;
-    line-height: 1.6;
-}
+        body {
+            font-family: Arial, sans-serif;
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: #020617;
-}
+            /* TECH BACKGROUND IMAGE */
+            background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
 
-header h1 {
-    color: #38bdf8;
-}
+            color: white;
+        }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-}
+        /* DARK OVERLAY FOR READABILITY */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
 
-nav a:hover {
-    color: #38bdf8;
-}
+        header {
+            text-align: center;
+            padding: 60px 20px;
+        }
 
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-}
+        h1 {
+            font-size: 50px;
+            letter-spacing: 2px;
+        }
 
-.hero h2 {
-    font-size: 45px;
-    color: #38bdf8;
-}
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
 
-.hero p {
-    margin: 20px 0;
-    color: #cbd5f5;
-}
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #00c3ff;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+        }
 
-.btn {
-    padding: 12px 30px;
-    background: #38bdf8;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
+        .btn:hover {
+            background: #00a3d1;
+        }
 
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: #1e293b;
-    padding: 25px;
-    width: 260px;
-    border-radius: 10px;
-}
-
-.footer {
-    background: #020617;
-    padding: 20px;
-    text-align: center;
-    color: #94a3b8;
-}
-
-/* POPUP */
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-}
-
-.popup-content {
-    background: #1e293b;
-    width: 300px;
-    margin: 120px auto;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-</style>
+        section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-<h1>CLUFRU</h1>
-<nav>
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-</nav>
-</header>
+    <header>
+        <h1>CLUFRU</h1>
+        <p>We Build Websites & Mobile Apps for Your Business</p>
+        <a class="btn" href="#">Get Your Website</a>
+    </header>
 
-<section class="hero">
-<h2>Build Your Business Online</h2>
-<p>We create modern websites and apps for your business</p>
-
-<button class="btn" onclick="openPopup()">Get Your Website</button>
-</section>
-
-<section class="section">
-<h2>Our Services</h2>
-
-<div class="cards">
-<div class="card">
-<h3>Website Development</h3>
-<p>Business websites</p>
-</div>
-
-<div class="card">
-<h3>App Development</h3>
-<p>Android apps</p>
-</div>
-
-<div class="card">
-<h3>Growth</h3>
-<p>Help you get customers</p>
-</div>
-</div>
-</section>
-
-<footer class="footer">
-<p>© 2026 CLUFRU | Anshuman Rath</p>
-</footer>
-
-<!-- POPUP -->
-<div id="popup" class="popup">
-<div class="popup-content">
-
-<h2>Contact Us</h2>
-<p><b>Founder:</b> Anshuman Rath</p>
-<p><b>Email:</b> clufru@gmail.com</p>
-<p><b>Phone:</b> +91 XXXXX XXXXX</p>
-
-<br>
-
-<button class="btn" onclick="closePopup()">Close</button>
-
-</div>
-</div>
-
-<script>
-function openPopup() {
-    document.getElementById("popup").style.display = "block";
-}
-
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
-</script>
+    <section>
+        <h2>About Us</h2>
+        <p>
+            CLUFRU is a tech service where we create modern websites and apps for businesses like bakeries,
+            shops, and startups at affordable prices.
+        </p>
+    </section>
 
 </body>
 </html>
